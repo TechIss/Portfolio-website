@@ -1,0 +1,19 @@
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
+
+.scrollable-element {
+  scrollbar-color: red yellow;
+  /* red is for the thumb and yellow is for the track */
+}
+/*# sourceMappingURL=stylesheet.css.map */

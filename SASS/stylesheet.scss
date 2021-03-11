@@ -1,0 +1,5 @@
+@import "./scrollbar";
+.scrollable-element {
+    scrollbar-color: red yellow;
+    /* red is for the thumb and yellow is for the track */
+}
