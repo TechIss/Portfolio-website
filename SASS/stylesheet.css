@@ -1,19 +1,313 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#main div {
+  /* IE 10 */
+  flex: 1;
+}
+
 *::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
-  background: orange;
+  background: #137b9b;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: blue;
+  background-color: #e7c34d;
   border-radius: 20px;
-  border: 3px solid orange;
+  border: 3px solid rgba(209, 25, 25, 0);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 10px;
+}
+
+#navbar > li {
+  font-weight: bold;
+}
+
+#maincontainer {
+  background-color: #ec1616;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+
+.card .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(500px) rotateY(0deg);
+}
+
+.card .face.front {
+  background: #ff0;
+}
+
+.card:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card .face.back {
+  background: #3bc2ff;
+  color: #fff;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+.card .face h2 {
+  font-size: 4em;
+  transform: perspective(500px) translateZ(50px);
+  text-transform: uppercase;
+}
+
+.card2 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  transform-style: preserve-3d;
+}
+
+.card2 .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: 2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: perspective(500px) rotateY(0deg);
+}
+
+.card2 .face.front {
+  background: #ff0;
+}
+
+.card2:hover .face.front {
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card2 .face.back {
+  background: #3bc2ff;
+  color: #fff;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card2:hover .face.back {
+  transform: perspective(500px) rotateY(360deg);
+}
+
+.card2 .face h2 {
+  font-size: 4em;
+  transform: perspective(500px) translateZ(50px);
+  text-transform: uppercase;
 }
 
 .scrollable-element {
-  scrollbar-color: red yellow;
+  scrollbar-color: #367486 coral;
   /* red is for the thumb and yellow is for the track */
 }
-/*# sourceMappingURL=stylesheet.css.map */
+
+#navbar {
+  width: 100%;
+  padding: 2%;
+  background-color: #137b9b;
+  z-index: 1;
+}
+
+.circle li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  z-index: 1;
+  color: transparent;
+}
+
+.circle li:hover {
+  color: wheat;
+  z-index: 2;
+  transition: 0.2s;
+}
+
+.circle {
+  z-index: 2;
+  margin-left: 13.5%;
+  margin-top: -2.6%;
+  position: fixed;
+}
+
+.circle1 {
+  border-radius: 50%;
+  background-color: wheat;
+  display: flex;
+  height: 25px;
+  width: 25px;
+}
+
+.circle2 {
+  border-radius: 50%;
+  background-color: wheat;
+  margin-left: 28.5rem;
+  margin-top: -1.8%;
+  display: flex;
+  height: 25px;
+  width: 25px;
+}
+
+.circle3 {
+  border-radius: 50%;
+  background-color: wheat;
+  margin-left: 57.5rem;
+  margin-top: -1.8%;
+  display: flex;
+  height: 25px;
+  width: 25px;
+}
+
+.circle4 {
+  border-radius: 50%;
+  background-color: wheat;
+  margin-left: 86.5rem;
+  margin-top: -1.8%;
+  display: flex;
+  height: 25px;
+  width: 25px;
+}
+
+.circle > div:hover {
+  z-index: 1;
+  background-color: transparent;
+  height: 25px;
+  width: 25px;
+}
+
+.containerCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0004);
+  transform-origin: center;
+  max-width: 350px;
+  transform: perspective(800px) rotateY(20deg);
+  transition: 0.5s;
+}
+
+.containerCarousel:hover img {
+  opacity: 0.1;
+}
+
+.containerCarousel img:hover {
+  transform: perspective(800px) rotateY(0deg);
+  opacity: 1;
+}
+
+#myBtn {
+  background: none;
+  border: none;
+  justify-self: center;
+  align-self: center;
+  display: inline-block;
+  width: 100%;
+  padding: 10%;
+}
+
+#myBtn:focus {
+  outline: 2px #ec1616;
+  border: 2px tomato;
+}
+
+#myBtn:hover {
+  background-color: tomato;
+}
+
+.card {
+  padding: 5%;
+}
+
+.cardcontainer {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=stylesheet.css.map */
