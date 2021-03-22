@@ -1,7 +1,9 @@
 .card {
     position: relative;
     height: 400px;
+    width: 400px;
     transform-style: preserve-3d;
+    font-size: small;
 }
 
 .card .face {
@@ -12,7 +14,7 @@
     height: 100%;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +22,7 @@
 }
 
 .card .face.front {
-    background: #ff0;
+    background: rgb(32, 80, 124);
 }
 
 .card:hover .face.front {
@@ -28,7 +30,7 @@
 }
 
 .card .face.back {
-    background: #3bc2ff;
+    background: rgb(231, 195, 77);
     color: #fff;
     transform: perspective(500px) rotateY(180deg);
 }
